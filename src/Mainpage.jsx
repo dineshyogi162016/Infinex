@@ -21,6 +21,11 @@ import ConfirmOTP from './admin/Pages/ConfirmOTP';
 import ResetPassword from './admin/Pages/ResetPassword';
 import LoginRoute from './Routes/LoginRoute';
 import ManageNavigation from './admin/Pages/ManageNavigation';
+import AboutAdmin from './admin/Pages/AboutAdmin';
+import ServicesAdmin from './admin/Pages/ServicesAdmin';
+import TestimonialAdmin from './admin/Pages/TestimonialAdmin';
+import BlogAdmin from './admin/Pages/BlogAdmin';
+//import AboutAdminJanvi from './admin/Pages/AboutAdminJanvi';
 
 const Mainpage = () => {
   
@@ -41,10 +46,14 @@ const Mainpage = () => {
         <Route path={"/Contact"} element={<UserRoute Component={Contact} />} />
 
         {/* Admin Routes  */}
-        <Route path={"/dashboard"} element={<AdminRoute Component={Dashboard} />} />
-        <Route path={"/ManageNavigation"} element={<AdminRoute Component={ManageNavigation} />} />
-        
-        
+        {/*<Route path={"/dashboard"} element={<AdminRoute Component={Dashboard} />} />*/}
+        {/*<Route path={"/ManageNavigation"} element={<AdminRoute Component={ManageNavigation} />} />*/}
+		<Route path={"/AboutAdmin"} element={<AdminRoute Component={AboutAdmin} />} />
+        <Route path={"/ServicesAdmin"} element={<AdminRoute Component={ServicesAdmin} />} />
+		<Route path={"/BlogAdmin"} element={<AdminRoute Component={BlogAdmin} />} />
+		<Route path={"/TestimonialAdmin"} element={<AdminRoute Component={TestimonialAdmin} />} />
+        {/*<Route path={"/AdminAboutJanvi"} element={<AdminRoute Component={AboutAdminJanvi} />} />*/}
+
         {/* Login Routes  */}
         <Route path={"/login"} element={<LoginRoute Component={Login} />} />
         <Route path="/signup" element={<LoginRoute Component={Sinup} /> } />

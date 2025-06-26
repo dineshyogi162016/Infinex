@@ -40,11 +40,19 @@ const AdminRoute = (props) => {
 
             <div className="side-nav-bar">
                 <ul className="nav flex-column mt-2">
-                    <li className="nav-item"><NavLink className="nav-link" to={"/dashboard"} ><span className='icon mr-2'><MdDashboard /></span>Dashboard</NavLink></li> 
-                    <li className="nav-item"><NavLink className="nav-link" to={"/team"} ><span className='icon mr-2'> <FaUser /></span>Team</NavLink></li>
-                    <li className="nav-item"><NavLink className="nav-link" to={"/ManageNavigation"} ><span className='icon mr-2'><MdDashboard /></span>Navigation</NavLink></li> 
-                    <li className="nav-item"><NavLink className="nav-link" to={"/setting"} ><span className='icon mr-2'><IoMdSettings /></span>Settings</NavLink></li>
-                    <li className="nav-item"><NavLink className="nav-link" to={"/team"} ><span className='icon mr-2'> <FaUser /></span>Team</NavLink></li>
+                    {/*<li className="nav-item"><NavLink className="nav-link" to={"/dashboard"} ><span className='icon mr-2'><MdDashboard /></span>Dashboard</NavLink></li> */}
+					<li className="nav-item"><NavLink className="nav-link" to={"/AboutAdmin"} ><span className='icon mr-2'><MdDashboard /></span>About</NavLink></li> 
+					<li className="nav-item"><NavLink className="nav-link" to={"/ServicesAdmin"} ><span className='icon mr-2'><IoMdSettings /></span>Services</NavLink></li>
+                    {/*<li className="nav-item"><NavLink className="nav-link" to={"/team"} ><span className='icon mr-2'> <FaUser /></span>Team</NavLink></li>*/}
+					<li className="nav-item"><NavLink className="nav-link" to={"/BlogAdmin"} ><span className='icon mr-2'><IoMdSettings /></span>Blogs</NavLink></li>
+					<li className="nav-item"><NavLink className="nav-link" to={"/TestimonialAdmin"} ><span className='icon mr-2'><MdDashboard /></span>Testimonials</NavLink></li> 
+
+					{/*<li className="nav-item"><NavLink className="nav-link" to={"/AboutAdminJanvi"} ><span className='icon mr-2'><MdDashboard /></span>AboutPage</NavLink></li> */}
+                    {/*<li className="nav-item"><NavLink className="nav-link" to={"/ManageNavigation"} ><span className='icon mr-2'><MdDashboard /></span>Navigation</NavLink></li> */}
+                    {/*<li className="nav-item"><NavLink className="nav-link" to={"/setting"} ><span className='icon mr-2'><IoMdSettings /></span>Settings</NavLink></li>*/}
+					
+					
+                    {/*<li className="nav-item"><NavLink className="nav-link" to={"/team"} ><span className='icon mr-2'> <FaUser /></span>Team</NavLink></li>*/}
                     
                 </ul>
             </div>
@@ -103,11 +111,14 @@ const AdminRoute = (props) => {
                         <Navbar.Collapse id="basic-navbar-nav" className='admin-radius'>
                         <Nav className="ms-auto">
                             <ul className="nav">
-                                <li className="nav-item"><NavLink className="nav-link" to={"/dashboard"} ><span className='icon mr-2'><MdDashboard /></span>Dashboard</NavLink></li> 
-                                <li className="nav-item"><NavLink className="nav-link" to={"/team"} ><span className='icon mr-2'> <FaUser /></span>Team</NavLink></li>
-                                <li className="nav-item"><NavLink className="nav-link" to={"/setting"} ><span className='icon mr-2'><IoMdSettings /></span>Settings</NavLink></li>
-                                <li className="nav-item"><NavLink className="nav-link" to={"/dashboard"} ><span className='icon mr-2'><MdDashboard /></span>Dashboard</NavLink></li> 
-                                <li className="nav-item"><NavLink className="nav-link" to={"/team"} ><span className='icon mr-2'> <FaUser /></span>Team</NavLink></li>
+                                {/*<li className="nav-item"><NavLink className="nav-link" to={"/dashboard"} ><span className='icon mr-2'><MdDashboard /></span>Dashboard</NavLink></li> */}
+								<li className="nav-item"><NavLink className="nav-link" to={"/AboutAdmin"} ><span className='icon mr-2'><MdDashboard /></span>About</NavLink></li> 
+					            <li className="nav-item"><NavLink className="nav-link" to={"/ServicesAdmin"} ><span className='icon mr-2'><IoMdSettings /></span>Services</NavLink></li>
+								<li className="nav-item"><NavLink className="nav-link" to={"/BlogAdmin"} ><span className='icon mr-2'><IoMdSettings /></span>Blogs</NavLink></li>
+								<li className="nav-item"><NavLink className="nav-link" to={"/testimonial"} ><span className='icon mr-2'><IoMdSettings /></span>Testimonial</NavLink></li>
+								{/*<li className="nav-item"><NavLink className="nav-link" to={"/AboutPageJanvi"} ><span className='icon mr-2'><IoMdSettings /></span>AboutPage</NavLink></li>*/}
+                                {/*<li className="nav-item"><NavLink className="nav-link" to={"/team"} ><span className='icon mr-2'> <FaUser /></span>Team</NavLink></li>*/}
+                                {/*<li className="nav-item"><NavLink className="nav-link" to={"/setting"} ><span className='icon mr-2'><IoMdSettings /></span>Settings</NavLink></li>*/}
                             </ul>
                         </Nav>
                         </Navbar.Collapse>
