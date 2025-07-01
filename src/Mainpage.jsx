@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import {Navigate, Route, Routes } from 'react-router-dom'
+import {Route, Routes } from 'react-router-dom'
 
 import Home from './user/Pages/Home'
 import About from './user/Pages/About'
@@ -21,6 +21,17 @@ import ConfirmOTP from './admin/Pages/ConfirmOTP';
 import ResetPassword from './admin/Pages/ResetPassword';
 import LoginRoute from './Routes/LoginRoute';
 import ManageNavigation from './admin/Pages/ManageNavigation';
+import ManageTeam from './admin/Pages/ManageTeam';
+import SampleAdminAboutPage from './admin/Pages/SampleAdminAboutPage';
+import RemoveTrailingSlash from './LocalAssets/RemoveTrailingSlash';
+import ManageContact from './admin/Pages/ManageContact';
+import ManagePortfolio from './admin/Pages/ManagePortfolio';
+import ManageCareer from './admin/Pages/ManageCareer';
+import AboutAdmin from './admin/Pages/AboutAdmin';
+import ServicesAdmin from './admin/Pages/ServicesAdmin';
+import TestimonialAdmin from './admin/Pages/TestimonialAdmin';
+import BlogAdmin from './admin/Pages/BlogAdmin';
+// import AboutAdminJanvi from './admin/Pages/AboutAdminJanvi';
 
 const Mainpage = () => {
   
@@ -30,6 +41,7 @@ const Mainpage = () => {
     }, []);
   return (
     <>
+      <RemoveTrailingSlash />
       <Routes>
         {/* User Routes  */}
         <Route path={"/"} element={<UserRoute Component={Home} />} />
@@ -40,11 +52,24 @@ const Mainpage = () => {
         <Route path={"/Blog"} element={<UserRoute Component={Blog} />} />
         <Route path={"/Contact"} element={<UserRoute Component={Contact} />} />
 
+
         {/* Admin Routes  */}
         <Route path={"/dashboard"} element={<AdminRoute Component={Dashboard} />} />
         <Route path={"/ManageNavigation"} element={<AdminRoute Component={ManageNavigation} />} />
+        <Route path={"/ManageTeam"} element={<AdminRoute Component={ManageTeam} />} />
+        <Route path={"/ManageContact"} element={<AdminRoute Component={ManageContact} />} />
+        <Route path={"/ManageContact/Contact"} element={<AdminRoute Component={ManageContact} />} />
+        <Route path={"/ManagePortfolio"} element={<AdminRoute Component={ManagePortfolio} />} />
+        <Route path={"/ManageAbout"} element={<AdminRoute Component={SampleAdminAboutPage} />} />
+        <Route path={"/ManageCareer"} element={<AdminRoute Component={ManageCareer} />} />
         
-        
+        {/* Janvi work paths  */}
+        <Route path={"/AboutAdmin"} element={<AdminRoute Component={AboutAdmin} />} />
+        <Route path={"/ServicesAdmin"} element={<AdminRoute Component={ServicesAdmin} />} />
+		    <Route path={"/BlogAdmin"} element={<AdminRoute Component={BlogAdmin} />} />
+		    <Route path={"/TestimonialAdmin"} element={<AdminRoute Component={TestimonialAdmin} />} />
+        {/*<Route path={"/AdminAboutJanvi"} element={<AdminRoute Component={AboutAdminJanvi} />} />*/}
+
         {/* Login Routes  */}
         <Route path={"/login"} element={<LoginRoute Component={Login} />} />
         <Route path="/signup" element={<LoginRoute Component={Sinup} /> } />
